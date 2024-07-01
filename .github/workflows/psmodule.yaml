@@ -1,4 +1,4 @@
-name: Copy and Zip Source Files
+name: Copy, Zip, and Commit Source Files
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main  # Adjust the branch as per your default branch name
 
 jobs:
-  copy_and_zip:
+  copy_zip_and_commit:
     runs-on: ubuntu-latest  # Use the latest Ubuntu runner
 
     steps:
@@ -27,9 +27,16 @@ jobs:
       - name: Move Artifact to Module Folder
         run: mv SentinelTIUploadToolkit.zip Module/
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+      - name: Commit new zip file
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add Module/SentinelTIUploadToolkit.zip
+          git commit -m "Update SentinelTIUploadToolkit.zip"
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          name: SentinelTIUploadToolkit
-          path: Module/SentinelTIUploadToolkit.zip
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
 
