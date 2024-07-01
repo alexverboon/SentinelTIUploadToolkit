@@ -221,7 +221,7 @@
     $jsonArray = @"
 {
   "sourcesystem": "$SourceSystem",
-  "value": [
+  "indicators": [
     $($jsonStrings -join ",`n")
   ]
 }
