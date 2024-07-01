@@ -3,7 +3,7 @@ name: Copy and Zip Source Files
 on:
   push:
     branches:
-      - main  # Adjust the branch as per your default branch name
+      - main  # Adjust the branch as per your default branch name ok
 
 jobs:
   copy_and_zip:
