@@ -3,7 +3,7 @@ name: Copy, Zip, and Commit Source Files
 on:
   push:
     branches:
-      - main  # Adjust the branch as per your default branch name o
+      - main  # Adjust the branch as per your default branch name
 
 jobs:
   copy_zip_and_commit:
@@ -22,8 +22,8 @@ jobs:
       - name: Zip Toolkit
         run: |
           cd SentinelTIUploadToolkit
-          zip -r ../SentinelTIUploadToolkit.zip .
-      
+          zip -r ../SentinelTIUploadToolkit.zip ./*
+
       - name: Move Artifact to Module Folder
         run: mv SentinelTIUploadToolkit.zip Module/
 
@@ -33,10 +33,8 @@ jobs:
           git config --local user.name "GitHub Actions"
           git add Module/SentinelTIUploadToolkit.zip
           git commit -m "Update SentinelTIUploadToolkit.zip"
-      
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-
