@@ -89,3 +89,4 @@ When all works as expected you see the imported TI appear in the Microsoft Senti
 - Create a Schedule for Automation Account Runbooks so that imports happen at the right time
 - Add more examples for importing md5 hashes and email IOCs
 - Automate PowerShell module ZIP file creation and upload to PowerShell Gallery
+- Update Endpoint to https://sentinelus.azure-api.net/{workspaceId}/threatintelligenceindicators:upload (Currently in Preview)

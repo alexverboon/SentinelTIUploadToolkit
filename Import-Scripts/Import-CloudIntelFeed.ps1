@@ -1,4 +1,6 @@
-﻿Import-Module -Name "$psScriptRoot\src\SentinelTIUploadToolkit.psm1" -Force
+﻿$modulePath = Join-Path -Path (Split-Path $PSScriptRoot -Parent) -ChildPath 'src\SentinelTIUploadToolkit.psm1'
+Import-Module -Name "$modulePath" -Force
+
 ##############################################################################################################
 # Define variables for TI API Upload
 ##############################################################################################################
@@ -6,12 +8,13 @@ $AppId = ''
 $AppSecret = ''
 $TenantName = "demo.OnMicrosoft.com"
 $workspaceId = ""
+
 ##############################################################################################################
 # Get Cloud Intel IP Addresses
 ##############################################################################################################
 $ApiKey = 'key{democloudintel}'
 $Email = 'democloudintel@himanshuanand.com'
-$Date = '06-09-2024'  
+$Date = '06-03-2024'  
 $response = Get-IOCCloudIntel -ApiKey $ApiKey -Email $Email -Date $Date
 ##############################################################################################################
 # Cloud Intel Sentinel TI Upload variables

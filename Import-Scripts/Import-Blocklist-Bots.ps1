@@ -1,5 +1,5 @@
-Import-Module -Name "$psScriptRoot\src\SentinelTIUploadToolkit.psm1" -Force
-
+$modulePath = Join-Path -Path (Split-Path $PSScriptRoot -Parent) -ChildPath 'src\SentinelTIUploadToolkit.psm1'
+Import-Module -Name "$modulePath" -Force
 ##############################################################################################################
 # Define variables for TI API Upload
 ##############################################################################################################
