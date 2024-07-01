@@ -1,6 +1,9 @@
 # Sentinel TI Upload Toolkit
 
-Sentinel Threat Intelligence Upload Toolkit
+***Sentinel Threat Intelligence Upload Toolkit***
+
+![localscript](./Assets/TISentinelLogo.png)
+
 
 The **Sentinel TI Upload Toolkit** contains a number of PowerShell functions and scripts to import Threat Intelligence IOCs into Microsoft Sentinel using the [upload indicators API](https://learn.microsoft.com/en-us/azure/sentinel/connect-threat-intelligence-upload-api). For more details also see [Reference the upload indicators API (Preview) to import threat intelligence to Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/upload-indicators-api)
 
