@@ -3,7 +3,8 @@ name: Copy and Zip Source Files
 on:
   push:
     branches:
-      - main  # Adjust the branch as per your default branch name okv4
+      - main  # Adjust the branch as per your default branch name
+
 jobs:
   copy_and_zip:
     runs-on: ubuntu-latest  # Use the latest Ubuntu runner
@@ -22,9 +23,13 @@ jobs:
         run: |
           cd SentinelTIUploadToolkit
           zip -r ../SentinelTIUploadToolkit.zip .
+      
+      - name: Move Artifact to Module Folder
+        run: mv SentinelTIUploadToolkit.zip Module/
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: SentinelTIUploadToolkit
-          path: SentinelTIUploadToolkit.zip
+          path: Module/SentinelTIUploadToolkit.zip
+
