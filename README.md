@@ -34,6 +34,7 @@ The Sentinel Threat Intelligence Upload Toolkit **PowerShell Module** includes t
 | Import-CloudIntel.ps1 | Import [CloudIntel](https://github.com/unknownhad/CloudIntel) IOC |
 | Import-DigitalSide-Threat-Intel.ps1 | Import [DigitalSide](https://osint.digitalside.it/) IOCs |
 | Import-OpenPhish.ps1 | Import [OpenPhish](https://openphish.com/) IOcs |
+| Import-Abuse-Botnet C2 IP Blacklist | Import SSL blacklist [Abuse.ch](https://sslbl.abuse.ch/) |
 
 ## Azure Automation Account Scripts
 
