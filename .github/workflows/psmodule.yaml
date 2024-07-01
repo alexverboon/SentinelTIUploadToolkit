@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v2  # Check out the repository content
 
       - name: Create Toolkit Directory
-        run: mkdir -p SentinelTIUploadToolkit  # Create the target directory
+        run: mkdir -p SentinelTIUploadToolkit/SentinelTIUploadToolkit  # Create the target directory
 
       - name: Copy source files
-        run: cp -r src/. SentinelTIUploadToolkit  # Copy all files from src folder to SentinelTIUploadToolkit
+        run: cp -r src/. SentinelTIUploadToolkit/SentinelTIUploadToolkit  # Copy all files from src folder to SentinelTIUploadToolkit
 
       - name: Zip Toolkit
         run: |
