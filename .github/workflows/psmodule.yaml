@@ -1,0 +1,31 @@
+name: Copy and Zip Source Files
+
+on:
+  push:
+    branches:
+      - main  # Adjust the branch as per your default branch name
+
+jobs:
+  copy_and_zip:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2  # Check out the repository content
+
+      - name: Create Toolkit Directory
+        run: mkdir -p SentinelTIUploadToolkit  # Create the target directory
+
+      - name: Copy source files
+        run: cp -r src/. SentinelTIUploadToolkit  # Copy all files from src folder to SentinelTIUploadToolkit
+
+      - name: Zip Toolkit
+        run: |
+          cd SentinelTIUploadToolkit
+          zip -r ../SentinelTIUploadToolkit.zip .
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: SentinelTIUploadToolkit
+          path: SentinelTIUploadToolkit.zip
