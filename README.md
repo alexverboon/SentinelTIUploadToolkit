@@ -6,7 +6,7 @@ The **Sentinel TI Upload Toolkit** contains a number of PowerShell functions and
 
 ## Purpose of the toolkit
 
-- Initially I started with just a few scripts while learning and trying to better understand the [STIX](https://docs.oasis-open.org/cti/stix/v2.1/cs01/stix-v2.1-cs01.html#_muftrcpnf89v) indicator format specification and teh [Request Body](https://learn.microsoft.com/en-us/azure/sentinel/upload-indicators-api#request-body) for the API.
+- Initially I started with just a few scripts while learning and trying to better understand the [STIX](https://docs.oasis-open.org/cti/stix/v2.1/cs01/stix-v2.1-cs01.html#_muftrcpnf89v) indicator format specification and the [Request Body](https://learn.microsoft.com/en-us/azure/sentinel/upload-indicators-api#request-body) for the API.
 - Provide a quick automated process to load custom TI into Microsoft Sentinel
 - Use Azure Automation account as an alternative to Azure Logic Apps
 - Comparisson and content review of various Open Source TI Feeds
