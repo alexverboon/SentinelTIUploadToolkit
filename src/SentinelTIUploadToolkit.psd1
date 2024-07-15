@@ -73,6 +73,7 @@
         'ConvertTo-STIXJson',
         'Get-IOCCloudIntel',
         "Get-IOCDomainNamesContent",
+        "Get-IOCIPRawContent",
         "Get-IOCIPContent",
         "Get-IOCUrlContent",
         "Import-ThreatIntelligenceIndicators"
