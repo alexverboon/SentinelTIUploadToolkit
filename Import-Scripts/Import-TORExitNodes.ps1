@@ -10,14 +10,15 @@ $TenantName = "demo.OnMicrosoft.com"
 $workspaceId = ""
 
 ##############################################################################################################
-# TOR Exit Nodes
+# TOR Exit Nodes - https://www.dan.me.uk/tornodes
 ##############################################################################################################
-$url = "https://check.torproject.org/torbulkexitlist"
+#$url = "https://check.torproject.org/torbulkexitlist"
+$url = "https://www.dan.me.uk/torlist/?exit"
 $response = Get-IOCIPRawContent -Url $url
 
 
 ##############################################################################################################
-# DigitalSide Threat-Intel Sentinel TI Upload variables
+# https://www.dan.me.uk/tornodes - Tor Exit Nodes - Threat-Intel Sentinel TI Upload variables
 ##############################################################################################################
 $SourceSystem = 'TORExitNodes'
 $ValidDays = 1
