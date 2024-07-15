@@ -38,14 +38,16 @@ The Sentinel Threat Intelligence Upload Toolkit **PowerShell Module** includes t
 | Import-DigitalSide-Threat-Intel.ps1 | Import [DigitalSide](https://osint.digitalside.it/) IOCs |
 | Import-OpenPhish.ps1 | Import [OpenPhish](https://openphish.com/) IOcs |
 | Import-Abuse-Botnet C2 IP Blacklist | Import SSL blacklist [Abuse.ch](https://sslbl.abuse.ch/) |
-| Import-TorExitNodes | Import [Tor Exit Nodes](https://metrics.torproject.org/collector.html#type-tordnsel) |
+| Import-TorExitNodes | Import [Tor Exit Nodes](https://www.dan.me.uk/torlist/?exit) |
+| Import-TorAllNodes | Import [Tor All Nodes](https://www.dan.me.uk/torlist/?full) |
 
 ## Azure Automation Account Scripts
 
 | Script | Description  |
 | ----------------------- | -------------------------------------------------------------------------------------- |
 | AA-Import-CloudIntelFeed.ps1 | Import [CloudIntel](https://github.com/unknownhad/CloudIntel) IOC |
-| AA-Import-TorExitNodes.ps1 | Import [Tor Exit Nodes](https://metrics.torproject.org/collector.html#type-tordnsel) IOC |
+| AA-Import-TorExitNodes.ps1 | Import [Tor Exit Nodes](https://www.dan.me.uk/torlist/?exit) IOC |
+| AA-Import-TorAllNodes.ps1 | Import [Tor Exit Nodes](https://www.dan.me.uk/torlist/?full) IOC |
 
 ## Initial Setup and Configuration
 
