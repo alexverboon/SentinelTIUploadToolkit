@@ -4,7 +4,6 @@
 
 ![Logo](./Assets/TISentinelLogo.png)
 
-
 The **Sentinel TI Upload Toolkit** contains a number of PowerShell functions and scripts to import Threat Intelligence IOCs into Microsoft Sentinel using the [upload indicators API](https://learn.microsoft.com/en-us/azure/sentinel/connect-threat-intelligence-upload-api). For more details also see [Reference the upload indicators API (Preview) to import threat intelligence to Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/upload-indicators-api)
 
 ## Purpose of the toolkit
@@ -25,6 +24,7 @@ The Sentinel Threat Intelligence Upload Toolkit **PowerShell Module** includes t
 | ConvertTo-STIXJson |     Converts a collection of IOCs (Indicators of Compromise) into STIX JSON format. |
 | Get-IOCDomainNamesContent | Retrieves domain names from a specified URL (TXT files) |
 | Get-IOCIPContent | Retrieves IP Addresses from a specified URL (TXT files) |
+| Get-IOCIPRawContent | Retrieves IP Addresses from a specified URL (TXT files) |
 | Get-IOCUrlContent | Retrieves Urls from a specified URL (TXT files) |
 | Import-ThreatIntelligenceIndicators | Import threat intelligence indicators to Microsoft Sentinel using the Threat Intelligence upload API. Using client credentials for authentication and authorization |
 | Import-ThreatIntelligenceIndicators_MI | Import threat intelligence indicators to Microsoft Sentinel using the Threat Intelligence upload API. Using system managed identity for authentication and authorization |
@@ -38,12 +38,15 @@ The Sentinel Threat Intelligence Upload Toolkit **PowerShell Module** includes t
 | Import-DigitalSide-Threat-Intel.ps1 | Import [DigitalSide](https://osint.digitalside.it/) IOCs |
 | Import-OpenPhish.ps1 | Import [OpenPhish](https://openphish.com/) IOcs |
 | Import-Abuse-Botnet C2 IP Blacklist | Import SSL blacklist [Abuse.ch](https://sslbl.abuse.ch/) |
+| Import-TorExitNodes | Import [Tor Exit Nodes](https://metrics.torproject.org/collector.html#type-tordnsel) |
 
 ## Azure Automation Account Scripts
 
 | Script | Description  |
 | ----------------------- | -------------------------------------------------------------------------------------- |
 | AA-Import-CloudIntelFeed.ps1 | Import [CloudIntel](https://github.com/unknownhad/CloudIntel) IOC |
+| AA-Import-TorExitNodes.ps1 | Import [Tor Exit Nodes](https://metrics.torproject.org/collector.html#type-tordnsel) IOC |
+
 
 ## Initial Setup and Configuration
 
