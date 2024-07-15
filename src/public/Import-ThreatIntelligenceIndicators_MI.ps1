@@ -51,8 +51,8 @@
 
 
     # Construct Threat Intelligence upload API endpoint URL
-    #$Uri = "https://sentinelus.azure-api.net/$WorkspaceId/threatintelligence:upload-indicators?api-version=2022-07-01"
-    $Uri = "https://sentinelus.azure-api.net/$WorkspaceId/threatintelligenceindicators:upload?api-version=2022-07-01"
+    $Uri = "https://sentinelus.azure-api.net/$WorkspaceId/threatintelligence:upload-indicators?api-version=2022-07-01"
+    #$Uri = "https://sentinelus.azure-api.net/$WorkspaceId/threatintelligenceindicators:upload?api-version=2022-07-01"
 
     try {
         # Convert JSON string to PowerShell object
