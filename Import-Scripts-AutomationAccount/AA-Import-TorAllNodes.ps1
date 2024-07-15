@@ -8,26 +8,25 @@ Import-Module -Name "SentinelTIUploadToolkit"
 $workspaceId = ""
 
 ##############################################################################################################
-# TOR Exit Nodes
+# TOR All Nodes https://www.dan.me.uk/tornodes
 ##############################################################################################################
-$url = "https://check.torproject.org/torbulkexitlist"
-#$url = "https://www.dan.me.uk/torlist/?exit"
+$url = "https://www.dan.me.uk/torlist/?full"
 $response = Get-IOCIPRawContent -Url $url
 
 ##############################################################################################################
 # TOR Exit Nodes Threat-Intel Sentinel TI Upload variables
 ##############################################################################################################
-$SourceSystem = 'TORExitNodes'
+$SourceSystem = 'TORAllNodes'
 $ValidDays = 1
-$Name = 'TORExitNodes'
-$Description = 'TOR Exit Nodes AA'
+$Name = 'TORAllNodes'
+$Description = 'TOR All Nodes'
 $Confidence = 100
 $TLP = 'white'
 $IOCType = "IPv4"
 $Labels = '["Tor", "indicator","botnet"]'
 $ExternalReferenceSourceName = 'website'
-$ExternalReferenceDescription = 'Tor Exit Nodes'
-$ExternalReferenceUrl = 'https://metrics.torproject.org/collector.html#type-tordnsel'
+$ExternalReferenceDescription = 'Tor All Nodes - www.dan.me.uk'
+$ExternalReferenceUrl = 'https://www.dan.me.uk/tornodes'
 
 $StixJsonOutPut = ConvertTo-STIXJson -Data $response `
                                   -SourceSystem $SourceSystem `

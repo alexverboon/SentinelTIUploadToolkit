@@ -47,7 +47,6 @@ The Sentinel Threat Intelligence Upload Toolkit **PowerShell Module** includes t
 | AA-Import-CloudIntelFeed.ps1 | Import [CloudIntel](https://github.com/unknownhad/CloudIntel) IOC |
 | AA-Import-TorExitNodes.ps1 | Import [Tor Exit Nodes](https://metrics.torproject.org/collector.html#type-tordnsel) IOC |
 
-
 ## Initial Setup and Configuration
 
 ### Local Scripts
